@@ -10,10 +10,11 @@ import draftToHtml from 'draftjs-to-html';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import PropTypes from 'prop-types';
 
-import '../Style/editor.css';
 import { BsTable } from 'react-icons/bs';
+import '../Style/editor.css';
 
 function CustomOption(props) {
+
   const [openraws, openRawColumn] = useState(false);
   const [datas, setDatas] = useState({
     row: '',
@@ -21,6 +22,7 @@ function CustomOption(props) {
   });
 
   const addTable = () => {
+    openRawColumn(false);
     const { editorState, onChange } = props;
     let contentState;
     let html = `<table style='border:1px solid #ccc'>
@@ -41,8 +43,8 @@ function CustomOption(props) {
       editorState.getCurrentContent(),
       editorState.getSelection(),
       contentState.getBlockMap()
-      );
-      console.log("lll", contentState);
+    );
+    console.log("lll", contentState);
 
     onChange(EditorState.push(editorState, contentState, "insert-characters"));
   };
@@ -53,10 +55,14 @@ function CustomOption(props) {
       role="button"
       title="Table" >
       <BsTable onClick={() => openRawColumn(true)} />
-      {openraws && <div>
-        <input type="text" value={datas.row} placeholder="row" onChange={(e) => { setDatas({ ...datas, row: e.target.value }) }}></input>
-        <input type="text" value={datas.column} placeholder="column" onChange={(e) => { setDatas({ ...datas, column: e.target.value }) }}></input>
-        <button onClick={addTable} type='button'>OK</button>
+
+      {openraws && <div className="modal">
+        <div className="modal-content">
+            <span onClick={() => openRawColumn(false)} className="close">&times;</span>
+            <input type="text" value={datas.row} placeholder="row" onChange={(e) => { setDatas({ ...datas, row: e.target.value }) }}></input>
+            <input type="text" value={datas.column} placeholder="column" onChange={(e) => { setDatas({ ...datas, column: e.target.value }) }}></input>
+            <button onClick={addTable} type='button'>OK</button>
+          </div>
       </div>}
     </div>
   );
