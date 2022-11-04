@@ -1,0 +1,30 @@
+.editor-head {
+    height: 50px;
+    background-color: white;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.text-editor {
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+    margin-top: 5px;
+}
+
+.header {
+    padding: 8px;
+    display: flex;
+}
+
+.header p {
+    margin: 5px;
+    font-size: 25px;
+}
+.button-submit{
+    background-color: white;
+    padding: 5px;
+    margin: 5px 0px;
+    text-align: end;
+}
