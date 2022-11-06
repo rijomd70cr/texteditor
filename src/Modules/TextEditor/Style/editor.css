@@ -1,66 +1,98 @@
 .editor-head {
-    height: 50px;
-    background-color: white;
-    padding: 3px;
-    font-size: 16px;
+  height: 50px;
+  background-color: white;
+  padding: 3px;
+  font-size: 16px;
 }
 
 .text-editor {
-    border: 1px solid #ccc;
-    width: 100%;
-    background-color: #fff;
-    min-height: 100vh;
-    margin-top: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+  margin-top: 5px;
 }
 
 .header {
-    padding: 8px;
-    display: flex;
+  padding: 8px;
+  display: flex;
 }
 
 .header p {
-    margin: 5px;
-    font-size: 25px;
+  margin: 5px;
+  font-size: 24px;
+  cursor: pointer;
 }
-
+.header p :hover {
+  background-color: #ccc;
+}
 .button-submit {
-    background-color: white;
-    padding: 5px;
-    margin: 5px 0px;
-    text-align: end;
+  background-color: white;
+  padding: 5px;
+  margin: 5px 0px;
+  text-align: end;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    left: 50%;
-    height: 75%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  left: 50%;
+  height: 75%;
 }
 
 .modal {
-    display: block;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: #ccc;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #ccc;
 }
 .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+input[type="number"] {
+  border: 1px solid #ccc;
+}
+.text-area {
+  height: 80%;
+  width: 100%;
+}
+.text-element {
+  width: 98%;
+  margin: auto;
+  min-height: inherit;
+  display: block;
+  border: none;
+  outline: none;
+}
+.table-inpur {
+  outline: none;
+  border: none;
+}
+
+table {
+  border: 1px solid #ccc;
+  margin: auto;
+  margin-bottom: 5px;
+}
+td {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
